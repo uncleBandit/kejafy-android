@@ -1,3 +1,4 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -33,17 +34,44 @@ android {
     buildFeatures {
         compose = true
     }
+
 }
 
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.icons.extended)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.core.ktx)
+
+    // Networking (Retrofit & OkHttp)
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp.logging)
+    
+    // Local Database (Room)
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    
+    // DataStore Preferences
+    implementation(libs.datastore.preferences)
+
+    // Navigation
+    implementation(libs.navigation.compose)
+
+    // Media3
+    implementation(libs.media3.exoplayer)
+    implementation(libs.media3.ui)
+
+    // Maps
+    implementation(libs.google.maps)
+    implementation(libs.maps.compose)
+
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)

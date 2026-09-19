@@ -1,3 +1,4 @@
 package com.pitahmzalendo.kejafy.core.database
 
-class Placeholder
+// Foundation local room database definitions placeholder
+class DatabasePlaceholder
